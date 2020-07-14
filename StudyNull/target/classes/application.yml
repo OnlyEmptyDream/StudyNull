@@ -1,0 +1,13 @@
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/springboot_db?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    aa:
+      bb: 10
+      cc: 29
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+
+
+  demo:
+    aa: 10
