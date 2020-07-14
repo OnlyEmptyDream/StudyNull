@@ -17,10 +17,20 @@ public class PathDemo {
         pathDemo.demo();
     }
 
-    public void demo(){
+    public void demo() {
+        try {
+            System.out.println(this.getClass().getPackage().getName());
+            String demoPath = new File(getClass().getClassLoader().getResource("").toURI()).getPath();
+            System.out.println(demoPath);
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         File f = new File(this.getClass().getResource("/").getPath());
         System.out.println(f);
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
         //如果放到其他工程中  这个地址也是其他工程的地址 而不是文件的绝对地址
         System.out.println(System.getProperty("user.dir"));
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~");

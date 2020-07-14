@@ -27,7 +27,7 @@ public class ExecutorUtil {
      *                     默认单位为毫秒
      * @return ScheduledFuture
      */
-    public static ScheduledFuture<?> scheduleAtFixedRate(Runnable command, long initialDelay, long period) {
+    public static ScheduledFuture<?> scheduleAtFixedRate (Runnable command, long initialDelay, long period){
         return scheduledThreadPool.scheduleAtFixedRate(command, initialDelay, period, TimeUnit.MILLISECONDS);
     }
 }
